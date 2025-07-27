@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-icon {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.main-content {
+    flex-grow: 1; /* Allows main content to take up available space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.note-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Space below controls */
+}
+
+.publish-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Remove margin-right if you want it flush left */
+    margin-right: 0;
+    align-self: flex-start; /* Ensures button is left-aligned in flex container */
+}
+
+.publish-button:hover {
+    background-color: #555;
+}
+
+.icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.icon {
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* New/Updated styles for the textarea */
+.note-input-container {
+    width: 100%; /* Ensure it takes full width of its parent */
+    margin-top: 20px; /* Space below controls */
+    flex-grow: 1; /* Allows the textarea container to expand */
+    display: flex; /* To allow the textarea to fill it */
+}
+
+.note-textarea {
+    width: 100%; /* Make textarea fill its container */
+    height: 100%; /* Make textarea fill its container */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none; /* Prevent manual resizing by user */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    color: #333;
+    font-family: Arial, sans-serif; /* Consistency in font */
+}
+
+.note-textarea::placeholder {
+    color: #bbb; /* Lighter placeholder text */
+}
+
+.note-textarea:focus {
+    outline: none;
+    border-color: #a3d9ff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(163, 217, 255, 0.5);
+}
+
+
+.footer {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    padding: 20px;
+    border-top: 1px solid #eee;
+    align-self: flex-end; /* Align footer to the end of the flex container */
+}
+
+.help-icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    border: 2px solid #888;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Default Light Mode */
+body {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+#toggleMode {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
